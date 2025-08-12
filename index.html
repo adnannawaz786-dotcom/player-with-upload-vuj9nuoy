@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player with Upload</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+      
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Loading spinner styles */
+      .loading-spinner {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: spin 1s ease-in-out infinite;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      /* Glassmorphism base styles */
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+      }
+
+      /* Nature color palette CSS variables */
+      :root {
+        --forest-green: #2d5016;
+        --sage-green: #9caf88;
+        --moss-green: #8fbc8f;
+        --earth-brown: #8b4513;
+        --sky-blue: #87ceeb;
+        --ocean-blue: #006994;
+        --sunset-orange: #ff6b35;
+        --lavender: #e6e6fa;
+        --cream: #f5f5dc;
+        --stone-gray: #708090;
+      }
+
+      /* Audio visualization canvas styles */
+      canvas {
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      /* Custom scrollbar for webkit browsers */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      /* Focus styles for accessibility */
+      button:focus,
+      input:focus {
+        outline: 2px solid var(--sky-blue);
+        outline-offset: 2px;
+      }
+
+      /* File input styling */
+      input[type="file"] {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      /* Progress bar styling */
+      .progress-bar {
+        appearance: none;
+        width: 100%;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+        overflow: hidden;
+      }
+
+      .progress-bar::-webkit-progress-bar {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+      }
+
+      .progress-bar::-webkit-progress-value {
+        background: linear-gradient(90deg, var(--sage-green), var(--moss-green));
+        border-radius: 3px;
+      }
+
+      .progress-bar::-moz-progress-bar {
+        background: linear-gradient(90deg, var(--sage-green), var(--moss-green));
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
