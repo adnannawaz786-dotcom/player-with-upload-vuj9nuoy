@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, SkipBack, SkipForward, Volume2, VolumeX } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAudio } from '../hooks/useAudio';
-import { glassMorphism, natureColors } from '../styles/theme';
+import { glass, natureColors } from '../styles/theme';
+
 
 const Player = ({ currentTrack, playlist, onTrackChange }) => {
   const {
