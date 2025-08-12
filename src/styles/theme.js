@@ -275,6 +275,5 @@ export const natureColors = {
   sage: colors.sage,
 };
 
-export const themeColors = colors;
-export const glassMorphism = glass;
+
 
