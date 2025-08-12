@@ -393,3 +393,7 @@ export const initializeStorage = () => {
     return false;
   }
 };
+
+// Alias exports to match expected imports in your app
+export const loadTracks = trackStorage.getTracks;
+export const saveTracks = trackStorage.saveTracks;
