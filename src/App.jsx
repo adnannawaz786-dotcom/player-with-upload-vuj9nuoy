@@ -4,7 +4,7 @@ import Player from './components/Player';
 import TrackList from './components/TrackList';
 import { useAudio } from './hooks/useAudio';
 import { loadTracks, saveTracks } from './utils/storage';
-import { colors as themeColors, glass as glassMorphism } from './styles/theme';
+import { glass, natureColors } from './styles/theme';
 
 
 function App() {
