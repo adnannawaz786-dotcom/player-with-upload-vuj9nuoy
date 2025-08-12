@@ -274,3 +274,7 @@ export const natureColors = {
   earth: colors.earth,
   sage: colors.sage,
 };
+
+export const themeColors = colors;
+export const glassMorphism = glass;
+
