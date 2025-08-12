@@ -6,7 +6,6 @@ import { useAudio } from './hooks/useAudio';
 import { loadTracks, saveTracks } from './utils/storage';
 import { glass, natureColors } from './styles/theme';
 
-
 function App() {
   const [tracks, setTracks] = useState([]);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
@@ -108,7 +107,7 @@ function App() {
       <div 
         className="min-h-screen flex items-center justify-center"
         style={{
-          background: `linear-gradient(135deg, ${themeColors.primary}, ${themeColors.secondary})`
+          background: `linear-gradient(135deg, ${natureColors.primary}, ${natureColors.secondary})`
         }}
       >
         <motion.div
@@ -126,7 +125,7 @@ function App() {
     <div 
       className="min-h-screen relative overflow-hidden"
       style={{
-        background: `linear-gradient(135deg, ${themeColors.primary}, ${themeColors.secondary})`
+        background: `linear-gradient(135deg, ${natureColors.primary}, ${natureColors.secondary})`
       }}
     >
       {/* Background decorative elements */}
@@ -142,7 +141,7 @@ function App() {
             ease: "linear"
           }}
           className="absolute -top-10 -left-10 w-40 h-40 rounded-full opacity-10"
-          style={{ backgroundColor: themeColors.accent }}
+          style={{ backgroundColor: natureColors.accent }}
         />
         <motion.div
           animate={{
@@ -155,7 +154,7 @@ function App() {
             ease: "linear"
           }}
           className="absolute top-1/2 -right-20 w-60 h-60 rounded-full opacity-10"
-          style={{ backgroundColor: themeColors.accent }}
+          style={{ backgroundColor: natureColors.accent }}
         />
         <motion.div
           animate={{
@@ -168,7 +167,7 @@ function App() {
             ease: "linear"
           }}
           className="absolute -bottom-20 left-1/3 w-32 h-32 rounded-full opacity-10"
-          style={{ backgroundColor: themeColors.accent }}
+          style={{ backgroundColor: natureColors.accent }}
         />
       </div>
 
