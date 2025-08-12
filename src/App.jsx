@@ -4,7 +4,8 @@ import Player from './components/Player';
 import TrackList from './components/TrackList';
 import { useAudio } from './hooks/useAudio';
 import { loadTracks, saveTracks } from './utils/storage';
-import { themeColors, glassMorphism } from './styles/theme';
+import { colors as themeColors, glass as glassMorphism } from './styles/theme';
+
 
 function App() {
   const [tracks, setTracks] = useState([]);
