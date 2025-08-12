@@ -266,3 +266,11 @@ export const breakpoints = {
   xl: '1280px',
   '2xl': '1536px',
 };
+
+// Added natureColors grouping for convenient import
+export const natureColors = {
+  forest: colors.forest,
+  ocean: colors.ocean,
+  earth: colors.earth,
+  sage: colors.sage,
+};
